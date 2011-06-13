@@ -2,6 +2,21 @@
 
 import sys, re
 
+def add(left,right):
+	return left+right
+
+def subtract(left,right):
+	return left-right
+
+def multiply(left,right):
+	return left*right
+
+def divide(left,right):
+	return left/right
+
+def exponent(left,right):
+	return left**right
+
 # recursive function to find the mathstack from a valid math expression
 def toStack(input, stack=[]): # stack starts as an integer array
 	if input == "":  #base case
