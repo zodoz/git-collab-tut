@@ -2,6 +2,48 @@
 
 import sys, re
 
+def solver(stack):
+	nums = []
+	while item = stack.pop:
+		if re.match("\\d",item):
+			nums.append(atoi(item))
+		elif item == "+":
+			nums.append(
+					add(
+						nums.pop(),
+						nums.pop()
+						)
+					)
+		elif item == "-":
+			nums.append(
+					subtract(
+						nums.pop(),
+						nums.pop()
+						)
+					)
+		elif item == "*":
+			nums.append(
+					multiply(
+						nums.pop(),
+						nums.pop()
+						)
+					)
+		elif item == "/":
+			nums.append(
+					divide(
+						nums.pop(),
+						nums.pop()
+						)
+					)
+		elif item == "^":
+			nums.append(
+					exponent(
+						nums.pop(),
+						nums.pop()
+						)
+					)
+	return nums.pop()
+
 # recursive function to find the mathstack from a valid math expression
 def toStack(input, stack=[]): # stack starts as an integer array
 	if input == "":  #base case
