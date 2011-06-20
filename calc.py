@@ -1,12 +1,14 @@
 #!/usr/bin/python
 
-import sys, re
+import sys, re, string
 
+# solves the stack iteratively
 def solver(stack):
 	nums = []
-	while item = stack.pop:
+	item = stack.pop()
+	while item:
 		if re.match("\\d",item):
-			nums.append(atoi(item))
+			nums.append(string.atoi(item))
 		elif item == "+":
 			nums.append(
 					add(
@@ -42,6 +44,10 @@ def solver(stack):
 						nums.pop()
 						)
 					)
+		if len(stack)>0:
+			item = stack.pop()
+		else:
+			item = False
 	return nums.pop()
 
 def add(left,right):
@@ -105,6 +111,7 @@ def matchParen(input):
 		index += 1
 	return index-1
 
+# gets the input until "exit"
 def getInput():
 	input = ""
 	while True:
@@ -115,6 +122,7 @@ def getInput():
 		if input.startswith("exit"):
 			return
 		mathstack = toStack(input,[])
-		print mathstack
+		result = solver(mathstack)
+		print result
 
 getInput()
