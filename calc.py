@@ -44,18 +44,23 @@ def solver(stack):
 					)
 	return nums.pop()
 
+# adds left to right
 def add(left,right):
 	return left+right
 
+# subtracts left from right
 def subtract(left,right):
 	return left-right
 
+# multiplies left and right
 def multiply(left,right):
 	return left*right
 
+# divides left by right
 def divide(left,right):
 	return left/right
 
+# exponents left by right
 def exponent(left,right):
 	return left**right
 
@@ -85,6 +90,7 @@ def toStack(input, stack=[]): # stack starts as an integer array
 	else:
 		raise "error!!!"
 
+# matches parentheses
 def matchParen(input):
 	depth = 1
 	index = 1
